@@ -1,0 +1,22 @@
+model Model
+  culture: en-US
+
+table Sales
+  measure SalesAmount = SUM(Sales[Amount])
+    formatString: "$ #,##0"
+
+  column 'Order Date'
+    dataType: dateTime
+    sourceColumn: OrderDate
+
+  column 'Product Key'
+    dataType: int64
+    sourceColumn: ProductKey
+
+  column 'Product name'
+    dataType: varchar(255)
+    sourceColumn: ProductName
+
+  column 'Product item'
+    dataType: varchar(255)
+    sourceColumn: Productitem 
